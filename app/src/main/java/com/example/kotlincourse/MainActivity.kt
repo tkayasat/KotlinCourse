@@ -6,9 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    companion object {
-        val field1 = "STATIC_STRING"
-    }
+
 
     val listener = object : View.OnClickListener {
         override fun onClick(p0: View?) {
@@ -16,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
     var i: Int = 0
 
+    /**задание 4**/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,7 +24,14 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        /** задание 5b**/
+        data class Cat(var name: String, var age: Int)
 
+        val cat1 = Cat("Barsik", 4)
+        val cat2 = cat1.copy(age = 7)
+
+
+        /**задание 5с**/
         val Cats = listOf("Murz", "Jerry", "Tom", "Wenny", "Tuna", "Freddy", "Sunny")
 
         repeat(Cats.size)

@@ -1,7 +1,6 @@
 package com.example.kotlincourse
 
 data class CatKotlinDataClass(
-    var field : String
+    val name: String,
+    var age: Int = 9
 )
-
-
